@@ -30,5 +30,17 @@ Manufacturer: Loetad
 
 ## Basic Config
 
+The base configuration describes hardware only. Add your own Wi-Fi, API, OTA, and captive-portal settings as needed;
+the site examples intentionally exclude credentials.
+
 ```yaml file=config.yaml
+```
+
+## Optional Daily Energy
+
+To restore the former daily-energy example, configure Wi-Fi and the Home Assistant API.
+Add the `time:` block below to your base config and merge its `sensor:` entry into the existing sensor list.
+The base list defines the `wattage` power sensor.
+
+```yaml file=daily-energy.yaml
 ```
